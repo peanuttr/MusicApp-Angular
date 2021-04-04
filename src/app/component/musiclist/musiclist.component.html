@@ -1,0 +1,15 @@
+<div class="container">
+    <input type="search" placeholder="Search" (keyup.enter)="SearchVideo($event)">
+    <br>
+    <table>
+        <tr *ngFor="let item of videos">
+            <td>
+                <iframe [src]="domVid(item.id)" frameborder="0" allowfullscreen width="1280px"
+                    height="720px"></iframe><br>
+                {{item.title}} <br>
+                {{item.description}}
+                <br>
+            </td>
+        </tr>
+    </table>
+</div>
